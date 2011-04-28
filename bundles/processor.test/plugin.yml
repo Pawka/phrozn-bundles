@@ -1,0 +1,6 @@
+name: Test
+description: |
+    Test processor plugin - used to demonstrate how new text processor
+    might be added to Phrozn
+version: 1.0
+author: Victor Farazdagi
