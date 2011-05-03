@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<project name="phrozn-bundles-builder" description="Compile bundles" default="main" >
+    <target name="main" description="Main action">
+        <!-- create archives -->
+        <foreach param="dir" absparam="." target="process-bundle">
+            <fileset dir=".">
+                <type type="dir" />
+                <depth max="0" min="0" />
+                <exclude name=".git/" />
+            </fileset>
+        </foreach>
+    </target>
+
+    <target name="process-bundle" description="Process bundle folder">
+        <phingcall target="create-archive">
+            <property name="dir" value="${dir}" />
+        </phingcall>
+        <phingcall target="push-to-repo">
+            <property name="bundle" value="${dir}.tgz" />
+        </phingcall>
+    </target>
+
+    <target name="create-archive" description="Create bundle archives">
+        <tar destfile="${dir}.tgz" compression="gzip">
+            <fileset dir="./${dir}">
+                <include name="**/**" />
+            </fileset>
+        </tar>
+        <echo>Compressing "${dir}" into "${dir}.tgz"</echo>
+    </target>
+
+    <target name="push-to-repo">
+        <exec command="git add ${bundle}" dir="." />
+        <exec command="git ci -m '${bundle} updated'" dir="." />
+        <gitpush 
+            repository="."
+            quiet="true" />
+    </target>
+</project>
