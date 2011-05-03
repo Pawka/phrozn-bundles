@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<project name="phrozn-bundles-builder" description="Compile bundles" default="main" >
+    <target name="main" description="Main action">
+        <!-- create archives -->
+        <foreach param="dir" absparam="." target="create-archives">
+            <fileset dir=".">
+                <type type="dir" />
+                <depth max="0" min="0" />
+                <exclude name=".git/" />
+            </fileset>
+        </foreach>
+    </target>
+
+    <target name="create-archives" description="Create bundle archives">
+        <tar destfile="${dir}.tgz" compression="gzip">
+            <fileset dir="./${dir}">
+                <include name="**/**" />
+            </fileset>
+        </tar>
+        <echo>Compressing "${dir}" into "${dir}.tgz"</echo>
+    </target>
+
+</project>
