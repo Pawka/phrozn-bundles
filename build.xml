@@ -21,11 +21,7 @@
     </target>
 
     <target name="create-archive" description="Create bundle archives">
-        <tar destfile="${dir}.tgz" compression="gzip">
-            <fileset dir="./${dir}">
-                <include name="**/**" />
-            </fileset>
-        </tar>
+        <exec command="cd ${dir} &amp;&amp; tar -czvf ../${dir}.tgz . &amp;&amp; cd .." />
         <echo>Compressing "${dir}" into "${dir}.tgz"</echo>
     </target>
 
