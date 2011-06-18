@@ -1,0 +1,10 @@
+name: Hatena
+description: |
+    Japanese diary service - syntax like wiki.
+    More info:
+    http://d.hatena.ne.jp/
+    http://nimpad.jp/hatenasyntax/
+    http://openpear.org/package/HatenaSyntax
+version: 1.0
+author: Kazusuke Sasezaki
+url: https://github.com/farazdagi/phrozn-bundles/raw/master/processor.hatena.tgz
