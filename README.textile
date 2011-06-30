@@ -7,7 +7,7 @@ Essentially bundles are directories with pre-defined structure.
 Phrozn takes care to extract and copy files into the given project.  
 It also keeps track of installed bundles so that they can be easily removed.
 
-h2. Links
+t2. Links
 
 * "phr bundle CLI docs":http://www.phrozn.info/en/documentation/cli-phr/#phr-bundle
 * "How to Create Phrozn Bundle":http://www.phrozn.info/en/documentation/articles/create-phrozn-bundle/ 
