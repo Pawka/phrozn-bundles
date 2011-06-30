@@ -4,12 +4,10 @@ h1. Phrozn Bundles
 
 Essentially bundles are directories with pre-defined structure. 
 
-Phrozn takes care to extract and copy files into the given project.  It also keeps track of installed bundles so that they can be easily removed.
-
-This repository serves as official place where bundles directly installable from Phrozn executable live. 
-
-*Should you want to contribute - it is easy*. Just fork the repo, create your bundle and file pull request. Once your changes are be pulled into this repo, Phrozn users will be able to apply the bundle.
+Phrozn takes care to extract and copy files into the given project.  
+It also keeps track of installed bundles so that they can be easily removed.
 
 h2. Links
 
-* "Documentation":http://phrozn.info/en/documentation/bundles/
+* "phr bundle CLI docs":http://www.phrozn.info/en/documentation/cli-phr/#phr-bundle
+* "How to Create Phrozn Bundle":http://www.phrozn.info/en/documentation/articles/create-phrozn-bundle/ 
