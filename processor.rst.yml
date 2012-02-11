@@ -1,0 +1,9 @@
+name: reStructuredText
+description: |
+    reStructuredText processor. Name files with a .rst extension to use.
+    More info:
+    http://docutils.sourceforge.net/docs/user/rst/quickstart.html
+    http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
+version: 1.0
+author: Simon Holywell
+url: https://github.com/farazdagi/phrozn-bundles/raw/master/processor.rst.tgz
